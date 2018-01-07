@@ -22,9 +22,11 @@ routes = [
     }
 ]
 
+
 @app.route('/route', methods=['GET'])
 def get_routes():
     return jsonify({'route': routes[1]})
 
+
 if __name__ == '__main__':
-    app.run(port=3389)
+    app.run(host='0.0.0.0', port=80, debug=True)
